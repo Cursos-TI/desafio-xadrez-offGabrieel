@@ -11,7 +11,19 @@ int main() {
     int bispo = 1;
     int torre = 1;
     int rainha = 1;
-
+    int opcao;
+    
+    // Menu de interação com as peças
+    
+    printf("Escolha qual peça deseja movimentar!\n");
+    printf("1. Bispo\n");
+    printf("2. Torre\n");
+    printf("3. Rainha\n");
+    printf("Sair do jogo.\n");
+    scanf("%d", &opcao);
+    
+    switch (opcao){
+    case 1:
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
     
@@ -22,6 +34,8 @@ int main() {
         bispo++;
     }
         printf("\n");
+    break;
+    case 2:
 
     // Implementação de Movimentação da Torre
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
@@ -33,6 +47,8 @@ int main() {
         
     } while (torre <= 5);
         printf("\n");
+    break;
+    case 3:
 
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
@@ -40,10 +56,13 @@ int main() {
     for (rainha = 1; rainha <= 5; rainha++) {
         printf("Rainha: Esquerda.\n");
     }
+    break;
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+    default:
+        printf("Saindo do jogo...\n");
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
@@ -51,6 +70,6 @@ int main() {
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
-
+    }
     return 0;
 }
