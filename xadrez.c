@@ -11,6 +11,7 @@ int main() {
     int bispo = 1;
     int torre = 1;
     int rainha = 1;
+    int cavalo = 1;
     int opcao;
     
     // Menu de interação com as peças
@@ -19,6 +20,7 @@ int main() {
     printf("1. Bispo\n");
     printf("2. Torre\n");
     printf("3. Rainha\n");
+    printf("4. Cavalo\n");
     printf("Sair do jogo.\n");
     scanf("%d", &opcao);
     
@@ -61,6 +63,102 @@ int main() {
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+    
+    case 4:
+    
+    int movimentoCavalo;
+    
+    printf("Qual direção deseja movimentar o Cavalo?\n");
+    printf("1. Cima, Cima, Direita.\n");
+    printf("2. Cima, Cima, Esquerda.\n");
+    printf("3. Baixo, Baixo, Direita.\n");
+    printf("4. Baixo, Baixo, Esquerda.\n");
+    printf("5. Direita, Direita, Cima.\n");
+    printf("6. Direita, Direita, Baixo.\n");
+    printf("7. Esquerda, Esquerda, Cima.\n");
+    printf("8. Esquerda, Esquerda, Baixo.\n");
+    scanf("%d", &movimentoCavalo);
+    
+    switch (movimentoCavalo){
+        
+    case 1:
+    
+    while (cavalo--){
+        for (int i = 0; i < 2; i++){
+            printf("Cima\n");
+        }
+        printf("Direita.\n");
+    }
+    break;
+    case 2:
+    
+    while (cavalo--){
+        for (int i = 0; i < 2; i++){
+            printf("Cima\n");
+        }
+        printf("Esquerda.\n");
+    }
+    break;
+    case 3:
+    
+    while (cavalo--){
+        for (int i = 0; i < 2; i++){
+            printf("Baixo\n");
+        }
+        printf("Direita.\n");
+    }
+    break;
+    case 4:
+    
+    while (cavalo--){
+        for (int i = 0; i < 2; i++){
+            printf("Baixo\n");
+        }
+        printf("Esquerda.\n");
+    }
+    break;
+    case 5:
+    
+    while (cavalo--){
+        for (int i = 0; i < 2; i++){
+            printf("Direita\n");
+        }
+        printf("Cima.\n");
+    }
+    break;
+    case 6:
+    
+    while (cavalo--){
+        for (int i = 0; i < 2; i++){
+            printf("Direita\n");
+        }
+        printf("Baixo.\n");
+    }
+    break;
+    case 7:
+    
+    while (cavalo--){
+        for (int i = 0; i < 2; i++){
+            printf("Esquerda\n");
+        }
+        printf("Cima.\n");
+    }
+    break;
+    case 8:
+    
+    while (cavalo--){
+        for (int i = 0; i < 2; i++){
+            printf("Esquerda\n");
+        }
+        printf("Baixo.\n");
+    }
+    break;
+    default:
+        printf("Opção Inválida!\n");
+    }
+    
+    // Finaliza o jogo.
+    
     default:
         printf("Saindo do jogo...\n");
 
