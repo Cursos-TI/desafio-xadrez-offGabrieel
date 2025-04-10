@@ -12,9 +12,11 @@ void moverTorre(int casasTorre){
 }
     
 void moverBispo(int casasBispo){
-    if (casasBispo > 0){
-        printf("Direita, Cima\n");
-            moverBispo(casasBispo - 1);
+    while (casasBispo--){
+        for (int i = 0; i < 1; i++){
+            printf("Cima, ");
+        }
+        printf("Direita.\n");
     }
 }
 void moverRainha(int casasRainha){
