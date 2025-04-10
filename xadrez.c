@@ -32,9 +32,9 @@ int main(){
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
     
     int movimentoBispo, movimentoTorre, movimentoRainha;
-    int cavalo = 1;
     int opcao;
     char finalizar;
+    int movimentoCavalo;
     
     // Menu de interação com as peças
     
@@ -101,31 +101,31 @@ int main(){
     // Um loop pode representar a movimentação horizontal e outro vertical.
     
             case 4:
-            
+            do{
                 printf("Qual direção deseja movimentar o Cavalo?\n");
                 printf("1. Cima, Cima, Direita.\n");
                 printf("2. Cima, Cima, Esquerda.\n");
                 scanf("%d", &movimentoCavalo);
+                
+                if(movimentoCavalo < 1 || movimentoCavalo > 2){
+                    printf("Movimento inválido! (max.5) \n");
+                }
+            }while(movimentoCavalo < 1 || movimentoCavalo > 2);
     
                 switch (movimentoCavalo){
         
                     case 1:
-    
-                    while (cavalo--){
+
                         for (int i = 0; i < 2; i++){
                             printf("Cima, ");
                         }
                         printf("Direita.\n");
-                    }
                     break;
                     case 2:
-    
-                    while (cavalo--){
                         for (int i = 0; i < 2; i++){
                             printf("Cima, ");
                         }
                         printf("Esquerda.\n");
-                    }
                     break;
                     default:
                     printf("Opção Inválida!\n");
