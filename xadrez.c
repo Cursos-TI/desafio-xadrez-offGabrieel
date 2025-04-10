@@ -92,7 +92,7 @@ int main() {
     
     while (cavalo--){
         for (int i = 0; i < 2; i++){
-            printf("Cima\n");
+            printf("Cima, ");
         }
         printf("Direita.\n");
     }
@@ -101,7 +101,7 @@ int main() {
     
     while (cavalo--){
         for (int i = 0; i < 2; i++){
-            printf("Cima\n");
+            printf("Cima, ");
         }
         printf("Esquerda.\n");
     }
@@ -110,7 +110,7 @@ int main() {
     
     while (cavalo--){
         for (int i = 0; i < 2; i++){
-            printf("Baixo\n");
+            printf("Baixo, ");
         }
         printf("Direita.\n");
     }
@@ -119,7 +119,7 @@ int main() {
     
     while (cavalo--){
         for (int i = 0; i < 2; i++){
-            printf("Baixo\n");
+            printf("Baixo, ");
         }
         printf("Esquerda.\n");
     }
@@ -128,7 +128,7 @@ int main() {
     
     while (cavalo--){
         for (int i = 0; i < 2; i++){
-            printf("Direita\n");
+            printf("Direita, ");
         }
         printf("Cima.\n");
     }
@@ -137,7 +137,7 @@ int main() {
     
     while (cavalo--){
         for (int i = 0; i < 2; i++){
-            printf("Direita\n");
+            printf("Direita, ");
         }
         printf("Baixo.\n");
     }
@@ -146,7 +146,7 @@ int main() {
     
     while (cavalo--){
         for (int i = 0; i < 2; i++){
-            printf("Esquerda\n");
+            printf("Esquerda, ");
         }
         printf("Cima.\n");
     }
@@ -155,7 +155,7 @@ int main() {
     
     while (cavalo--){
         for (int i = 0; i < 2; i++){
-            printf("Esquerda\n");
+            printf("Esquerda, ");
         }
         printf("Baixo.\n");
     }
@@ -163,6 +163,7 @@ int main() {
     default:
         printf("Opção Inválida!\n");
     }
+    break;
     
     // Finaliza o jogo.
     
