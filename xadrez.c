@@ -26,16 +26,12 @@ void moverRainha(int casasRainha){
     }
 }
 
-
-
-
-
-int main() {
+int main(){
     
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
     
-    int movimentoBispo;
+    int movimentoBispo, movimentoTorre, movimentoRainha;
     int cavalo = 1;
     int opcao;
     char finalizar;
@@ -48,58 +44,72 @@ int main() {
         printf("2. Torre\n");
         printf("3. Rainha\n");
         printf("4. Cavalo\n");
-        printf("Sair do jogo.\n");
+        printf("5. Sair do jogo.\n");
         scanf("%d", &opcao);
     
-    switch (opcao){
-        case 1:
+        switch (opcao){
+            case 1:
     
-        // Implementação de Movimentação do Bispo
-        // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+            // Implementação de Movimentação do Bispo
         
             do{
                 printf("Quantas casas deseja mover? (max.5)\n");
                 scanf("%d", &movimentoBispo);
                 
                 if(movimentoBispo < 1 || movimentoBispo > 5){
-                    printf("Quantidade de casas inválida! \n");
+                    printf("Quantidade de casas inválida! (max.5) \n");
                 }
-            
             }while(movimentoBispo < 1 || movimentoBispo > 5);
         
             moverBispo(movimentoBispo);
     
             break;
-        case 2:
+            case 2:
         
-        // Implementação de Movimentação da Torre
-    
-        moverTorre(5);
-    
-    break;
-        case 3:
+            // Implementação de Movimentação da Torre
+        
+            do{
+                printf("Quantas casas deseja mover? (max.5)\n");
+                scanf("%d", &movimentoTorre);
+                
+                if(movimentoTorre < 1 || movimentoTorre > 5){
+                    printf("Quantidade de casas inválida! (max.5) \n");
+                }
+            }while(movimentoTorre < 1 || movimentoTorre > 5);
+        
+            moverTorre(movimentoTorre);
+
+            break;
+            case 3:
+            
     // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
     
-        moverRainha(8);
+            do{
+                printf("Quantas casas deseja mover? (max.5)\n");
+                scanf("%d", &movimentoRainha);
+                
+                if(movimentoRainha < 1 || movimentoRainha > 5){
+                    printf("Quantidade de casas inválida! (max.5) \n");
+                }
+            }while(movimentoRainha < 1 || movimentoRainha > 5);
+        
+            moverRainha(movimentoRainha);
             break;
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
     
-        case 4:
+            case 4:
+            
+                printf("Qual direção deseja movimentar o Cavalo?\n");
+                printf("1. Cima, Cima, Direita.\n");
+                printf("2. Cima, Cima, Esquerda.\n");
+                scanf("%d", &movimentoCavalo);
     
-        int movimentoCavalo;
-    
-            printf("Qual direção deseja movimentar o Cavalo?\n");
-            printf("1. Cima, Cima, Direita.\n");
-            printf("2. Cima, Cima, Esquerda.\n");
-            scanf("%d", &movimentoCavalo);
-    
-            switch (movimentoCavalo){
+                switch (movimentoCavalo){
         
-                case 1:
+                    case 1:
     
                     while (cavalo--){
                         for (int i = 0; i < 2; i++){
@@ -108,7 +118,7 @@ int main() {
                         printf("Direita.\n");
                     }
                     break;
-                case 2:
+                    case 2:
     
                     while (cavalo--){
                         for (int i = 0; i < 2; i++){
@@ -117,17 +127,18 @@ int main() {
                         printf("Esquerda.\n");
                     }
                     break;
-                default:
+                    default:
                     printf("Opção Inválida!\n");
                 }
                 break;
-    }
+    } 
+        
     printf("Continuar jogando?(S/N)\n");
     scanf(" %c", &finalizar);
     
-    } while (finalizar == 's', 'S');
+    }while (finalizar == 's' || finalizar == 'S');
     
-    printf("Saindo do jogo...");
+        printf("Jogo encerrado!");
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
