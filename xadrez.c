@@ -36,9 +36,10 @@ int main() {
     
     int cavalo = 1;
     int opcao;
+    char finalizar;
     
     // Menu de interação com as peças
-    
+do{  
     printf("Escolha qual peça deseja movimentar!\n");
     printf("1. Bispo\n");
     printf("2. Torre\n");
@@ -164,11 +165,13 @@ int main() {
         printf("Opção Inválida!\n");
     }
     break;
+    }
+    printf("Deseja sair do jogo?(S/N)\n");
+    scanf(" %c", &finalizar);
     
-    // Finaliza o jogo.
+    } while (finalizar == 'n', 'N');
     
-    default:
-        printf("Saindo do jogo...\n");
+    printf("Saindo do jogo...");
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
@@ -176,6 +179,6 @@ int main() {
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
-    }
+    
     return 0;
 }
